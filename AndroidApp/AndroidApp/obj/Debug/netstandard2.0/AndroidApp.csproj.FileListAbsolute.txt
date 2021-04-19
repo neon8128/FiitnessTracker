@@ -1,0 +1,17 @@
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\bin\Debug\netstandard2.0\AndroidApp.deps.json
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\bin\Debug\netstandard2.0\AndroidApp.dll
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\bin\Debug\netstandard2.0\ref\AndroidApp.dll
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\bin\Debug\netstandard2.0\AndroidApp.pdb
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\FrontControl\FlyOutHeader.xaml.g.cs
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\Views\Page1.xaml.g.cs
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\AndroidApp.AssemblyInfoInputs.cache
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\AndroidApp.AssemblyInfo.cs
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\AndroidApp.csproj.CoreCompileInputs.cache
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\AndroidApp.dll
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\ref\AndroidApp.dll
+C:\Users\suciu\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Debug\netstandard2.0\AndroidApp.pdb

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:AndroidApp.Views"
+       xmlns:FrontControl="clr-namespace:AndroidApp.FrontControl"
+       Title="AndroidApp"
+       x:Class="AndroidApp.AppShell"
+       TabBarIsVisible="False"
+       FlyoutBackgroundColor ="LightSlateGray"
+       FlyoutHeaderBehavior="CollapseOnScroll"
+       FlyoutVerticalScrollMode="Enabled">
+
+    <Shell.FlyoutHeader>
+        <FrontControl:FlyOutHeader />
+    </Shell.FlyoutHeader>
+<FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+       <ShellContent Title="About the project"
+       ContentTemplate="{DataTemplate local:NewItemPage}">
+       </ShellContent>
+       
+       <ShellContent Title="Page1"
+         ContentTemplate="{DataTemplate local:Page1}" />
+
+        
+    
+    </FlyoutItem>
+    
+    
+<MenuItem Text="LogOut" Command="{Binding LogOutCommand }"></MenuItem>
+
+</Shell>
