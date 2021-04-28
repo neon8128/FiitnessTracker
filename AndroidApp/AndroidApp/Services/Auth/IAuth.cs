@@ -10,7 +10,7 @@ namespace AndroidApp.Services.Auth
     {
         Task<bool> Login(String Username, String Password);
 
-        Task<String> Register(UserModel User, String Password);
+        Task<bool> Register(String User, String Password, String Email);
 
     }
 }

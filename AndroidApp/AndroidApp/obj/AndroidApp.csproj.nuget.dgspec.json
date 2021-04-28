@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\suciu\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp\\AndroidApp.csproj": {}
+    "D:\\stuff\\licenta\\FiitnessTracker\\AndroidApp\\AndroidApp\\AndroidApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\suciu\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp\\AndroidApp.csproj": {
+    "D:\\stuff\\licenta\\FiitnessTracker\\AndroidApp\\AndroidApp\\AndroidApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\suciu\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp\\AndroidApp.csproj",
+        "projectUniqueName": "D:\\stuff\\licenta\\FiitnessTracker\\AndroidApp\\AndroidApp\\AndroidApp.csproj",
         "projectName": "AndroidApp",
-        "projectPath": "C:\\Users\\suciu\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp\\AndroidApp.csproj",
-        "packagesPath": "C:\\Users\\suciu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\suciu\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp\\obj\\",
+        "projectPath": "D:\\stuff\\licenta\\FiitnessTracker\\AndroidApp\\AndroidApp\\AndroidApp.csproj",
+        "packagesPath": "C:\\Users\\Usource\\.nuget\\packages\\",
+        "outputPath": "D:\\stuff\\licenta\\FiitnessTracker\\AndroidApp\\AndroidApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\suciu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usource\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -56,6 +56,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "Plugin.ValidationRules": {
+              "target": "Package",
+              "version": "[1.2.2, )"
             },
             "Xamarin.CommunityToolkit": {
               "target": "Package",

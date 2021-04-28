@@ -17,21 +17,29 @@ namespace AndroidApp.Services.Navigation
 
         public void GoBack() => MainPage.Navigation.PopAsync();
 
-        public  void NavigateTo(string pageKey, object parameter = null)
+        public void NavigateTo(string pageKey, object parameter = null)
         {
-            if (pages.TryGetValue(pageKey, out Type pageType))
+            try
             {
-                var page = (Page)Activator.CreateInstance(pageType);
-                page.SetNavigationArgs(parameter);
+                if (pages.TryGetValue(pageKey, out Type pageType))
+                {
+                    var page = (Page)Activator.CreateInstance(pageType);
+                    page.SetNavigationArgs(parameter);
 
-                MainPage.Navigation.PushAsync(page);
+                    MainPage.Navigation.PushAsync(page);
 
-               //  (page.BindingContext as BaseViewModel).Initialize(parameter);
+                    //  (page.BindingContext as BaseViewModel).Initialize(parameter);
+                }
+                else
+                {
+                    throw new ArgumentException($"This page doesn't exist: {pageKey}.", nameof(pageKey));
+                }
             }
-            else
+            catch(Exception e)
             {
-                throw new ArgumentException($"This page doesn't exist: {pageKey}.", nameof(pageKey));
+
             }
+            
         }
     }
 

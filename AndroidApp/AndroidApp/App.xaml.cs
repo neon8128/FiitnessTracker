@@ -38,7 +38,8 @@ namespace AndroidApp
 
             //saving the pages in the dictionary for the navigation service
             NavigationService.Configure(ViewNames.LoginPage, typeof(LoginPage));
-            NavigationService.Configure(ViewNames.NewItemPage, typeof(NewItemPage));
+            NavigationService.Configure(ViewNames.RegisterPage, typeof(RegisterPage));
+            NavigationService.Configure(ViewNames.FirstPage, typeof(FirstPage));
 
         }
     }

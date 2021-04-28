@@ -10,5 +10,8 @@ namespace AndroidApp.Utility
     {
         public static LoginViewModel _loginViewModel { get; set; }
          = new LoginViewModel();
+
+        public static RegisterViewModel _registerViewModel { get; set; }
+         = new RegisterViewModel();
     }
 }

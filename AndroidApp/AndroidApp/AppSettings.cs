@@ -6,6 +6,6 @@ namespace AndroidApp
 {
      public static class AppSettings
     {
-        public static String Url = "https://licentawebapi.azurewebsites.net";
+        public static String Url = "https://server-try02-pm8.conveyor.cloud";
     }
 }

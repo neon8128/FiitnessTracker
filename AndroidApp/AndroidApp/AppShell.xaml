@@ -13,19 +13,20 @@
     <Shell.FlyoutHeader>
         <FrontControl:FlyOutHeader />
     </Shell.FlyoutHeader>
-<FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-       <ShellContent Title="About the project"
-       ContentTemplate="{DataTemplate local:NewItemPage}">
-       </ShellContent>
-       
-       <ShellContent Title="Page1"
-         ContentTemplate="{DataTemplate local:Page1}" />
+    <Shell.BackButtonBehavior >
+        <BackButtonBehavior IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="About the project"
+       ContentTemplate="{DataTemplate local:FirstPage}">
+        </ShellContent>
 
-        
-    
+      
+
+
     </FlyoutItem>
-    
-    
-<MenuItem Text="LogOut" Command="{Binding LogOutCommand }"></MenuItem>
+
+
+    <MenuItem Text="LogOut" Command="{Binding LogOutCommand }"></MenuItem>
 
 </Shell>

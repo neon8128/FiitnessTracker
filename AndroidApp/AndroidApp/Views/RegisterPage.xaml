@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"     
+             x:Class="AndroidApp.Views.RegisterPage"
+             xmlns:viewModels="clr-namespace:AndroidApp.ViewModels"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:InvertedBoolConverter x:Key="invertBoolConverter"/>
+            <xct:CharactersValidationBehavior
+                x:Key="characterValidation"           
+            CharacterType="Letter"
+            MaximumCharacterCount="10"
+            MinimumCharacterCount="5"
+        />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+        <StackLayout BackgroundColor="White">
+            <Image Source="shape.png"
+                   HorizontalOptions="EndAndExpand"
+                   HeightRequest="200" />
+            <Label Text="Create Account"
+                   FontAttributes="Bold"
+                   FontSize="Title"
+                   TextColor="#2C2C2C"
+                   Margin="20" />
+                <Entry Placeholder="Username"
+                       x:Name="User"
+                   Margin="20,10,20,10"
+                   Text="{Binding Username,Mode=OneWayToSource}">
+                    <Entry.Behaviors>
+                        <xct:CharactersValidationBehavior Flags="ValidateOnUnfocusing"
+                                                          MinimumCharacterCount="4"
+                                                           IsValid="{Binding UsernameValid}" />
+                    </Entry.Behaviors>
+                </Entry>
+                <Label Text="Username not valid" TextColor="Red"
+                   IsVisible="{Binding UsernameValid,Converter={StaticResource invertBoolConverter}}"/>
+            
+                <Entry Placeholder="Email"
+                   Margin="20,10,20,10"
+                   Text="{Binding Email,Mode=OneWayToSource}"
+                   Keyboard="Email">
+                <Entry.Behaviors>
+                    <xct:EmailValidationBehavior Flags="ValidateOnUnfocusing"
+                                                 IsValid="{Binding EmailValid}"/>
+                </Entry.Behaviors>
+            </Entry>
+            
+            <Label Text="Email not valid" TextColor="Red"
+                   IsVisible="{Binding EmailValid,Converter={StaticResource invertBoolConverter}}"/>
+
+                <Entry Placeholder="Password"
+                   Margin="20,10,20,10"
+                   Text="{Binding Password,Mode=OneWayToSource}"
+                   IsPassword="True" >
+                    <Entry.Behaviors>
+                        <xct:CharactersValidationBehavior Flags="ValidateOnUnfocusing"
+                                                          MinimumCharacterCount="4"
+                                                           IsValid="{Binding PasswordValid}" />
+
+                    </Entry.Behaviors>
+                </Entry>
+            
+                <Label Text="Password not valid" TextColor="Red"
+                   IsVisible="{Binding PasswordValid,Converter={StaticResource invertBoolConverter}}"/>
+
+                <Grid Margin="36,28,20,20">
+                
+                <Frame BackgroundColor="#FA6400"
+                       
+                       Padding="15"
+                       CornerRadius="35"
+                       >
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="SIGN UP"
+                               HorizontalOptions="EndAndExpand"
+                               FontSize="Medium"
+                               VerticalOptions="Center"
+                               TextColor="White" />
+                        <Image Source="rightarrow.png"
+                               HorizontalOptions="CenterAndExpand"
+                               HeightRequest="30" />
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SignUpCommand}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+            <Label Margin="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="EndAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Already have an account? "
+                              FontSize="Small"
+                              TextColor="#2C2C2C" />
+                        <Span Text=" Sign in "
+                              TextColor="#FA6400"
+                              FontSize="Small">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GoToLogIn}" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

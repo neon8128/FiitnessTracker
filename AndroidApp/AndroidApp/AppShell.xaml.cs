@@ -1,4 +1,5 @@
-﻿using AndroidApp.ViewModels;
+﻿
+using AndroidApp.ViewModels;
 using AndroidApp.Views;
 using Autofac;
 using System;
@@ -16,6 +17,6 @@ namespace AndroidApp
             BindingContext = App.Container.Resolve<AppShellViewModel>();
         }
 
-        
+
     }
 }

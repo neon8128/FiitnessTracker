@@ -23,26 +23,61 @@ namespace AndroidApp.Services.Auth
             var httpClient = new HttpClient();
             var json = JsonConvert.SerializeObject(login); // serializing the login object 
             var content = new StringContent(json, Encoding.UTF8, "application/json"); //specifying the json format 
-            var response = await httpClient.PostAsync(AppSettings.Url+"/auth/login", content);
-            // calling post async with the json object
-
-            if(!response.IsSuccessStatusCode)
+            
+            try
             {
-                return false;
-            }
-            var jsonResult = await response.Content.ReadAsStringAsync();
+                using var response = await httpClient.PostAsync(AppSettings.Url+"/auth/login", content); // calling post async with the json object
+                if (!response.IsSuccessStatusCode)
+                {
+                    return false;
+                }
+                else
+                {
+                    var jsonResult = await response.Content.ReadAsStringAsync();
+                    var jwtToken = JsonConvert.DeserializeObject<Token>(jsonResult);
+                    Preferences.Set("Token", jwtToken.Data); // save the jwt token in the local storage
+                    Preferences.Set("Username", jwtToken.Username);
+                    Preferences.Set("Role", jwtToken.Role);
+                    return true;
+                }
 
-            var jwtToken = JsonConvert.DeserializeObject<Token>(jsonResult);
-            Preferences.Set("Token", jwtToken.Data); // save the jwt token in the local storage
-            Preferences.Set("Username", jwtToken.Username);
-            Preferences.Set("Role", jwtToken.Role);
-            return true;
+            }
+            catch(Exception e)
+            {
+                await App.Current.MainPage.DisplayAlert("Something went wrong", e.Message, "OK");
+
+            }
+            return false;
 
         }
 
-        public Task<String> Register(UserModel User, String Password)
+        public async Task<bool> Register(String User, String Password, String Email)
         {
-            throw new NotImplementedException();
+            var register = new UserRegisterDTO
+            {
+                Username = User,
+                Password = Password,
+                Email = Email
+
+            };
+            var httpClient = new HttpClient();
+            var json = JsonConvert.SerializeObject(register); // serializing the register object 
+            var content = new StringContent(json, Encoding.UTF8, "application/json"); //specifying the json format 
+
+            try
+            {
+                using var response = await httpClient.PostAsync(AppSettings.Url + "/auth/register", content); // calling post async with the json object
+                if (!response.IsSuccessStatusCode)
+                {
+                    return false;
+                }
+                else return true;
+            }
+            catch(Exception e)
+            {
+                await App.Current.MainPage.DisplayAlert("Something went wrong", e.Message, "OK");
+            }
+            return false;
         }
     }
 }

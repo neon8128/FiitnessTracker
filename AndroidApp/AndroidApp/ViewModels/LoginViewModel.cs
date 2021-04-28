@@ -12,17 +12,17 @@ namespace AndroidApp.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        private String _userName;
-        public String UserName
+        private String _username;
+        public String Username
         {
             get
             {
-                return _userName;
+                return _username;
             }
 
             set
             {
-                _userName = value;
+                _username = value;
                 OnPropertyChanged("Username");
             }
         }
@@ -32,7 +32,7 @@ namespace AndroidApp.ViewModels
         {
             get
             {
-                return _password;
+               return _password;
             }
             set
             {
@@ -41,7 +41,7 @@ namespace AndroidApp.ViewModels
             }
         }
 
-        
+        public ICommand _goToRegister { get; }
         public  ICommand _loginCommand { get; }
         public Auth _loginService { get; }
 
@@ -49,29 +49,31 @@ namespace AndroidApp.ViewModels
         {
 
           _loginCommand = new Command(OnLoginClicked);
-           
+           _goToRegister = new Command(OnRegisterClick);
         }
-        
-       
-       
-        
+
+        private async void OnRegisterClick(object obj)
+        {
+            App.NavigationService.NavigateTo(ViewNames.RegisterPage);
+            
+        }
+
         public async void OnLoginClicked()
         {
-          
-  
+           
            var logService = new Auth();
-          var  canLogIn = await logService.Login(UserName, Password);
+           var  canLogIn = await logService.Login(Username, Password);
            
             
            if (canLogIn)
            {
               
-                App.NavigationService.NavigateTo(ViewNames.NewItemPage);
+                App.NavigationService.NavigateTo(ViewNames.FirstPage);
            }
 
            else
            {
-               await App.Current.MainPage.DisplayAlert("Test Title", "Test", "OK");
+               await App.Current.MainPage.DisplayAlert("Error", "Username or password are incorrect", "OK");
            }
         
 

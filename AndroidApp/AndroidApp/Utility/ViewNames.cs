@@ -9,6 +9,8 @@ namespace AndroidApp.Utility
     {
         public const String LoginPage = "LoginPage";
 
-        public const String NewItemPage = "NewItemPage";
+        public const String RegisterPage = "RegisterPage";
+
+        public const String FirstPage = "FirstPage";
     }
 }
