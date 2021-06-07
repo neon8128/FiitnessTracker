@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Plugin.Fingerprint;
+using Plugin.Fingerprint.Abstractions;
 using Xamarin.Forms;
 
 namespace AndroidApp.ViewModels
@@ -78,6 +80,29 @@ namespace AndroidApp.ViewModels
         
 
         }
+
+        public  ICommand SignInWithBiometrics => new Command(async () =>
+       {
+
+           var availability = await   // true if  biometrics are available ; false otherwise
+            CrossFingerprint.Current.IsAvailableAsync();
+
+           if(!availability)
+           {
+               await App.Current.MainPage.DisplayAlert("Warning", "No biometrics available", "Ok");
+               return;
+           }
+
+           var authResult = await CrossFingerprint.Current.AuthenticateAsync(new
+               AuthenticationRequestConfiguration("Heads up", "I would like" +
+               " to use your biometrics"));
+            
+           if(authResult.Authenticated)
+           {
+               App.NavigationService.NavigateTo(ViewNames.FirstPage);
+           }
+
+       });
 
        
     }

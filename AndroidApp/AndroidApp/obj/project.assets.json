@@ -45,6 +45,15 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.Fingerprint/2.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Plugin.Fingerprint.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plugin.Fingerprint.dll": {}
+        }
+      },
       "Plugin.ValidationRules/1.2.2": {
         "type": "package",
         "compile": {
@@ -294,6 +303,47 @@
         "newtonsoft.json.13.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "Plugin.Fingerprint/2.1.4": {
+      "sha512": "JwmvyQ8KF/prPx/Aflt1Mlstz6K5KL7K7z6kqTp9EG113/wCaRDa9VOY4qdDahjufijeNDJ+mwEys7IbvsAjUA==",
+      "type": "package",
+      "path": "plugin.fingerprint/2.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid90/Plugin.Fingerprint.dll",
+        "lib/monoandroid90/Plugin.Fingerprint.pdb",
+        "lib/monoandroid90/Plugin.Fingerprint.xml",
+        "lib/net45/Plugin.Fingerprint.dll",
+        "lib/net45/Plugin.Fingerprint.pdb",
+        "lib/net45/Plugin.Fingerprint.xml",
+        "lib/netstandard2.0/Plugin.Fingerprint.dll",
+        "lib/netstandard2.0/Plugin.Fingerprint.pdb",
+        "lib/netstandard2.0/Plugin.Fingerprint.xml",
+        "lib/tizen40/Plugin.Fingerprint.dll",
+        "lib/tizen40/Plugin.Fingerprint.pdb",
+        "lib/tizen40/Plugin.Fingerprint.xml",
+        "lib/uap10.0.16299/Plugin.Fingerprint.dll",
+        "lib/uap10.0.16299/Plugin.Fingerprint.pdb",
+        "lib/uap10.0.16299/Plugin.Fingerprint.pri",
+        "lib/uap10.0.16299/Plugin.Fingerprint.xml",
+        "lib/xamarinios10/Plugin.Fingerprint.dll",
+        "lib/xamarinios10/Plugin.Fingerprint.pdb",
+        "lib/xamarinios10/Plugin.Fingerprint.xml",
+        "lib/xamarinmac20/Plugin.Fingerprint.dll",
+        "lib/xamarinmac20/Plugin.Fingerprint.pdb",
+        "lib/xamarinmac20/Plugin.Fingerprint.xml",
+        "lib/xamarintvos10/Plugin.Fingerprint.dll",
+        "lib/xamarintvos10/Plugin.Fingerprint.pdb",
+        "lib/xamarintvos10/Plugin.Fingerprint.xml",
+        "lib/xamarinwatchos10/Plugin.Fingerprint.dll",
+        "lib/xamarinwatchos10/Plugin.Fingerprint.pdb",
+        "lib/xamarinwatchos10/Plugin.Fingerprint.xml",
+        "plugin.fingerprint.2.1.4.nupkg.sha512",
+        "plugin.fingerprint.nuspec",
+        "readme.txt",
+        "xamarin_fingerprint.png"
       ]
     },
     "Plugin.ValidationRules/1.2.2": {
@@ -835,6 +885,7 @@
       "AutoMapper >= 10.1.1",
       "Autofac >= 6.1.0",
       "Newtonsoft.Json >= 13.0.1",
+      "Plugin.Fingerprint >= 2.1.4",
       "Plugin.ValidationRules >= 1.2.2",
       "Xamarin.CommunityToolkit >= 1.1.0",
       "Xamarin.Essentials >= 1.6.1",
@@ -898,6 +949,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.1, )"
+          },
+          "Plugin.Fingerprint": {
+            "target": "Package",
+            "version": "[2.1.4, )"
           },
           "Plugin.ValidationRules": {
             "target": "Package",

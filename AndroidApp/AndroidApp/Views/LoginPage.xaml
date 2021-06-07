@@ -9,73 +9,81 @@
              xmlns:viewModels="clr-namespace:AndroidApp.ViewModels"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False">
-  <Grid BackgroundColor="White">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="0"  >
-            <Image Source="shape.png"  VerticalOptions="EndAndExpand"  HeightRequest="100"/>
-
-        </StackLayout>
-        <Grid RowSpacing="20" Grid.Row="1" Margin="20,100,20,0" BackgroundColor="White" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="0"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            
-            <Label Text="Login"
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout BackgroundColor="White">
+                <Image Source="shape.png"
+                   HorizontalOptions="EndAndExpand"
+                   HeightRequest="200" />
+                <Label Text="Log in"
                    FontAttributes="Bold"
                    FontSize="Title"
-                   TextColor="#2C2C2C"
-                   Margin="0,0,20,0"
-                   Grid.Row="2"/>
-            <Entry Grid.Row="3" Placeholder="Username" 
-                   PlaceholderColor="#bababa" FontSize="16"
-                    Text="{Binding Username,Mode=OneWayToSource}"/>
-            
-           <Entry Grid.Row="4" Placeholder="Password"
-                  PlaceholderColor="#bababa" 
-                  FontSize="16"
-                  IsPassword="True"
-                  Text="{Binding Password,Mode=OneWayToSource}"/>
-            <Button Text="LogIn" BackgroundColor="#FA6400" TextColor="White"
-                    FontSize="Medium"
-                    Padding="20"
-                    CornerRadius="35"
-                    HeightRequest="60" VerticalOptions="Start" Grid.Row="5"
-                    Command="{Binding _loginCommand }"/>
-           
+                   TextColor="Black"
+                   Margin="20" />
+                <Entry Placeholder="Username"
+                       x:Name="User"
+                   Margin="20,10,20,10"
+                   TextColor="Black"
+                   Text="{Binding Username,Mode=OneWayToSource}"/>
+
                
-            </Grid>
-            <StackLayout Grid.Row="2" BackgroundColor="#ffffff">
-               
-            <Label Margin="20"
+                <Entry Placeholder="Password"
+                   Margin="20,10,20,10"
+                       
+                   Text="{Binding Password,Mode=OneWayToSource}"
+                   IsPassword="True"
+                   TextColor="Black"/>
+
+
+                <StackLayout Spacing="20" Margin="20,40,20,20">
+
+                    <Frame BackgroundColor="#FA6400"
+                       
+                       Padding="15"
+                       CornerRadius="35"
+                       >
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Sign In"
+                               HorizontalOptions="EndAndExpand"
+                               FontSize="Medium"
+                               VerticalOptions="Center"
+                               TextColor="White" />
+                            <Image Source="rightarrow.png"
+                               HorizontalOptions="CenterAndExpand"
+                               HeightRequest="30" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding _loginCommand}"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+ 
+                        <ImageButton Source="fingerPrint.png"
+                               HorizontalOptions="CenterAndExpand"
+                               HeightRequest="60"
+                               Command="{Binding SignInWithBiometrics}"/>
+
+  
+                </StackLayout>
+                <Label Margin="20"
                    HorizontalOptions="Center"
                    VerticalOptions="EndAndExpand">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Don't have an account? "
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Dont have an account? "
                               FontSize="Small"
                               TextColor="#2C2C2C" />
-                        <Span Text=" Register here "
+                            <Span Text=" Register "
                               TextColor="#FA6400"
                               FontSize="Small">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding _goToRegister}" />
-                            </Span.GestureRecognizers>
-                        </Span>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-        </StackLayout>
-        </Grid>
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding _goToRegister}" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

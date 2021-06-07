@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Plugin.Fingerprint": {
+              "target": "Package",
+              "version": "[2.1.4, )"
+            },
             "Plugin.ValidationRules": {
               "target": "Package",
               "version": "[1.2.2, )"

@@ -4,5 +4,6 @@
     <SelectedDevice>pixel_3a_xl_r_11_0_-_api_30</SelectedDevice>
     <DefaultDevice>pixel_3a_xl_r_11_0_-_api_30</DefaultDevice>
     <ActiveDebugProfile>pixel_3a_xl_r_11_0_-_api_30</ActiveDebugProfile>
+    <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

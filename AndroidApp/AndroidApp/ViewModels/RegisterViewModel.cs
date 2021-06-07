@@ -112,7 +112,7 @@ namespace AndroidApp.ViewModels
            if(AreFieldsValid() && canRegister) // checks is fields are valid
             {
                 await App.Current.MainPage.DisplayAlert("Welcome", "", "Ok");// display message
-                App.NavigationService.NavigateTo(ViewNames.FirstPage);
+                App.NavigationService.NavigateTo(ViewNames.LoginPage);
             }
           
             else

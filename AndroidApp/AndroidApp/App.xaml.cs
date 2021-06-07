@@ -40,6 +40,7 @@ namespace AndroidApp
             NavigationService.Configure(ViewNames.LoginPage, typeof(LoginPage));
             NavigationService.Configure(ViewNames.RegisterPage, typeof(RegisterPage));
             NavigationService.Configure(ViewNames.FirstPage, typeof(FirstPage));
+            Application.Current.UserAppTheme = OSAppTheme.Light;
 
         }
     }

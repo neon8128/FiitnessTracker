@@ -28,11 +28,12 @@
             <Label Text="Create Account"
                    FontAttributes="Bold"
                    FontSize="Title"
-                   TextColor="#2C2C2C"
+                   TextColor="Black"
                    Margin="20" />
                 <Entry Placeholder="Username"
                        x:Name="User"
                    Margin="20,10,20,10"
+                   TextColor="Black"
                    Text="{Binding Username,Mode=OneWayToSource}">
                     <Entry.Behaviors>
                         <xct:CharactersValidationBehavior Flags="ValidateOnUnfocusing"
@@ -45,6 +46,7 @@
             
                 <Entry Placeholder="Email"
                    Margin="20,10,20,10"
+                   TextColor="Black"
                    Text="{Binding Email,Mode=OneWayToSource}"
                    Keyboard="Email">
                 <Entry.Behaviors>
@@ -59,7 +61,8 @@
                 <Entry Placeholder="Password"
                    Margin="20,10,20,10"
                    Text="{Binding Password,Mode=OneWayToSource}"
-                   IsPassword="True" >
+                   IsPassword="True"
+                   TextColor="Black">
                     <Entry.Behaviors>
                         <xct:CharactersValidationBehavior Flags="ValidateOnUnfocusing"
                                                           MinimumCharacterCount="4"

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nGpc6RTVl97Qwi3OnSuvuI+s5oTIDo9qigDs5S80UdD9VgQdoe3RzmrQSKS5PWfSiLlQ6T1EXo5LbtzgoaWR/A==",
+  "dgSpecHash": "ZVrukkd7DDmiy0HHQy63TC4RlLqjApSy/74vaRqgcWLMmFyDkMYNcwK/MC3lEHFlZuYfXGY77ogS9V2MVwfrEQ==",
   "success": true,
   "projectFilePath": "D:\\stuff\\licenta\\FiitnessTracker\\AndroidApp\\AndroidApp\\AndroidApp.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Usource\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Usource\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Usource\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Usource\\.nuget\\packages\\plugin.fingerprint\\2.1.4\\plugin.fingerprint.2.1.4.nupkg.sha512",
     "C:\\Users\\Usource\\.nuget\\packages\\plugin.validationrules\\1.2.2\\plugin.validationrules.1.2.2.nupkg.sha512",
     "C:\\Users\\Usource\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Usource\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
